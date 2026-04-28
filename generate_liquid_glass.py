@@ -2,6 +2,7 @@ import gifos
 import os
 import glob
 import requests
+from dotenv import load_dotenv
 from PIL import Image, ImageFilter, ImageDraw, ImageChops
 from gifos.utils.convert_ansi_escape import ConvertAnsiEscape
 
@@ -42,6 +43,8 @@ ConvertAnsiEscape.ANSI_ESCAPE_MAP_TXT_COLOR.update({
 #   - terminal content is composited using chroma-key (bg pixels show glass through)
 #   - macOS chrome (rounded border, shadow, traffic lights) is drawn on top
 # ============================================
+
+load_dotenv()
 
 # Auto-detected from GitHub Actions context; falls back to env var or default.
 USERNAME = (

@@ -13,6 +13,9 @@ frames/
 # Claude Code
 .claude/
 
+# Codex local state
+.codex
+
 # Dev scripts
 debug_stats.py
 

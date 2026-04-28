@@ -2,6 +2,7 @@ import gifos
 import os
 import glob
 import requests
+from dotenv import load_dotenv
 from PIL import Image, ImageFilter, ImageDraw, ImageFont, ImageChops
 from gifos.utils.convert_ansi_escape import ConvertAnsiEscape
 
@@ -45,6 +46,8 @@ ConvertAnsiEscape.ANSI_ESCAPE_MAP_TXT_COLOR.update({
 #   - Terminal content composited via chroma-key
 #   - GNOME 2-style chrome: title bar + menu bar + right-side buttons
 # ============================================
+
+load_dotenv()
 
 # Auto-detected from GitHub Actions context; falls back to env var or default.
 USERNAME = (

@@ -2,6 +2,7 @@ import gifos
 from datetime import datetime
 import os
 import requests
+from dotenv import load_dotenv
 
 # ============================================
 # Terminal GIF with GitHub Stats
@@ -17,6 +18,8 @@ import requests
 # - Select only: read:user
 # - Copy the token and add it to .env
 # ============================================
+
+load_dotenv()
 
 # Auto-detected from GitHub Actions context; falls back to env var or default.
 USERNAME = (
